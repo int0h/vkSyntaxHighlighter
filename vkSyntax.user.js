@@ -102,9 +102,12 @@
             i.classList.add('langSyntax');            
 
             // check if there is any errors
-            if (i.textContent.replace(/\s+/gm, ' ') != oldText.replace(/\s+/gm, ' ')){
-                //i.innerHTML = oldHtml;
-                console.log(i.textContent.replace(/\s+/gm, ' ') +'\n\n\n'+ oldText.replace(/\s+/gm, ' '))
+
+            //path to code table
+            var codeTable = i.children[0].children[0].children[0].children[1].children[0];
+
+            if (codeTable.textContent.replace(/\s+/gm, ' ') != oldText.replace(/\s+/gm, ' ')){
+                i.innerHTML = oldHtml;
             };
 
         });
